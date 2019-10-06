@@ -3,7 +3,7 @@ package com.example.simpleappwithmoderntechnologies.repostiory
 import com.example.simpleappwithmoderntechnologies.di.appModule
 import com.example.simpleappwithmoderntechnologies.properJson
 import com.example.simpleappwithmoderntechnologies.repostiory.exception.InvalidBaseCurrencyException
-import com.example.simpleappwithmoderntechnologies.unproperJson
+import com.example.simpleappwithmoderntechnologies.unProperJson
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.CoreMatchers.notNullValue
 import org.junit.After
@@ -18,7 +18,7 @@ import org.koin.test.get
 
 class RatesRepositoryImplTest : KoinTest {
 
-    lateinit var repository: RatesRepositoryImpl
+    private lateinit var repository: RatesRepositoryImpl
 
     @After
     fun after() {
@@ -38,7 +38,7 @@ class RatesRepositoryImplTest : KoinTest {
 
     @Test(expected = InvalidBaseCurrencyException::class)
     fun receivedBadJson_throwException() {
-        startKoinWithFakeApiService(CorrectRatesAPiService(unproperJson))
+        startKoinWithFakeApiService(CorrectRatesAPiService(unProperJson))
         runBlocking {
             val result = repository.getUsdPlnRate()
             assertTrue(result is Result.Success)

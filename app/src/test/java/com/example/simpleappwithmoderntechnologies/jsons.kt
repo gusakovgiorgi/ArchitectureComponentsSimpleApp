@@ -1,7 +1,7 @@
 package com.example.simpleappwithmoderntechnologies
 
 
-val unproperJson = """
+val unProperJson = """
     {
     "error":"some error text"
     }

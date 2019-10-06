@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 
 class RatesViewModel(private val ratesRepository: RatesRepository) : ViewModel() {
-    val scheduledStandadTIme = 60000L
+    val scheduledStandardTime = 60000L
     private val _ratesStateLIveData = MutableLiveData<RatesState>()
     private var job: Job? = null
 
@@ -36,7 +36,7 @@ class RatesViewModel(private val ratesRepository: RatesRepository) : ViewModel()
 
     private suspend fun executePeriodically() {
         while (true) {
-            delay(scheduledStandadTIme)
+            delay(scheduledStandardTime)
             fetchDataFromRepository()
         }
     }

@@ -42,7 +42,7 @@ class RatesDtoToRateMapperTest {
     }
 
     @Test(expected = NoQuoteCurrencyException::class)
-    fun inputDtoWithoutQUoteQurrency_returnException() {
+    fun inputDtoWithoutQuoteCurrency_returnException() {
         val dtoWithoutQuoteCurrency = RatesDto(
             mapOf("EUR" to "1.234", "UAH" to "1.4545", "GEL" to "5"),
             Currency.USD,

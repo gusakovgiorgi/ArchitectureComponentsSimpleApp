@@ -4,12 +4,12 @@ ___
 
 Application use:
 * Koin dependency library; 
-* architectual components(viewmodel,extensions);
+* architectural components(viewModel,extensions);
 * retrofit2;
 * coroutines;
-* coroutineScope extentions.
+* coroutineScope extensions.
 
-App is written in MVVM style with Repository parrent. DTOs transfer in model objects visa mappers. Exception handling rely on repository.
+App is written in MVVM style with Repository parent. DTOs transfer in model objects visa mappers. Exception handling rely on repository.
 *\*There is some tests which show how to test components.
 \*App should proper handle orientation changing.
 \*Used API https://api.exchangeratesapi.io/latest*
