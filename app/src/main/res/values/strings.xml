@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleAppWithModernTechnologies</string>
+    <string name="usd">USD</string>
+    <string name="pln">PLN</string>
+    <string name="fetching">Fetching</string>
+    <string name="error_occurred">Error occurred</string>
+</resources>
